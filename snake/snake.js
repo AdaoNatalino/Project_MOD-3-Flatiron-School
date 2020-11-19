@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 // music.play();
 })
-const URL = `http://localhost:3000/users`
+const URL = `https://backdatacharlieandadao.herokuapp.com/users`
 
 let player = JSON.parse(localStorage.getItem('player'));
 
@@ -80,7 +80,6 @@ const draw = () => {
     ctx.drawImage(apple, food.x, food.y);  
     
     // old head position
-    // debugger
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
 
@@ -122,7 +121,6 @@ document.addEventListener('keydown', (e) => direction(e))
 
 function finishGame() {
     gameOver.play();
-    // createDivAlert();
     if (score > player.highscores.snake ) {
         player.highscores.snake = score;
         updateUserDatabase();
@@ -158,7 +156,6 @@ function createNewGameButton() {
     let object = { 
       highscores: player.highscores
     };
-    debugger
     let configObject = {
     method: 'PATCH',
     headers: {

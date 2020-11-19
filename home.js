@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('user');
-    const URL = `http://localhost:3000/users`
+    const URL = `https://backdatacharlieandadao.herokuapp.com/users`
     const choices = document.getElementById('choices');
     const header = document.getElementById('header');
     let player;
